@@ -5,7 +5,7 @@ Self-Driving Car Engineer Nanodegree Program
 
 Overview
 
-This repository contains all the code needed to complete the Bonus Challenge: Cathc the Run Away Car with Unscented Kalman Filter.
+This repository contains all the code needed to complete the Bonus Challenge: Catch the Run Away Car with Unscented Kalman Filter.
 
 Project Introduction
 
