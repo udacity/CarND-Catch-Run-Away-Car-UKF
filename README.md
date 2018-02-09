@@ -3,16 +3,16 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
-Overview
+### Overview
 
 This repository contains all the code needed to complete the Bonus Challenge: Catch the Run Away Car with Unscented Kalman Filter.
 
-Project Introduction
+### Project Introduction
 
 In this project, not only do you implement an UKF, but also use it to catch an escaped car driving in a circular path. 
 The run away car will be being sensed by a stationary sensor, that is able to measure both noisy lidar and radar data. The capture vehicle will need to use these measurements to close in on the run away car. To capture the run away car the capture vehicle needs to come within .1 unit distance of its position. However the capture car and the run away car have the same max velocity, so if the capture vehicle wants to catch the car, it will need to predict where the car will be ahead of time.
 
-Running the Code
+### Running the Code
 
 This project involves the Term 2 Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
 
@@ -20,20 +20,18 @@ This repository includes two files that can be used to set up and intall uWebSoc
 
 Once the install for uWebSocketIO is complete, the main program can be built and ran by doing the following from the project top directory.
 
-mkdir build 
+`mkdir build && cd build`
 
-cd build 
+`cmake .. && make` 
 
-cmake .. make 
+`./UnscentedKF`
 
-./UnscentedKF
-
-Note that the programs that need to be written to accomplish the project are src/ukf.cpp, ukf.h, and main.cpp which will use some strategy to catch the car, just going to the cars current esimtated position will not be enough since the capture vehicle is not fast enough. There are a number of different strategies you can use to try to catch the car, but all will likely involve predicting where the car will be in the future which the UKF can do. Also remember that the run away car is simplifying moving a circular path without any noise in its movements.
+Note that the programs that need to be written to accomplish the project are `src/ukf.cpp`, `ukf.h`, and `main.cpp` which will use some strategy to catch the car, just going to the cars current esimtated position will not be enough since the capture vehicle is not fast enough. There are a number of different strategies you can use to try to catch the car, but all will likely involve predicting where the car will be in the future which the UKF can do. Also remember that the run away car is simplifying moving a circular path without any noise in its movements.
 
 
-Here is the main protocol that main.cpp uses for uWebSocketIO in communicating with the simulator.
+Here is the main protocol that `main.cpp` uses for uWebSocketIO in communicating with the simulator.
 
-INPUT: values provided by the simulator to the c++ program
+**INPUT**: values provided by the simulator to the C++ program
 
 
 
@@ -52,7 +50,7 @@ INPUT: values provided by the simulator to the c++ program
 ["radar_measurement"]
 
 
-OUTPUT: values provided by the c++ program to the simulator
+**OUTPUT**: values provided by the c++ program to the simulator
 
 // best particle values used for calculating the error evaluation
 
@@ -74,5 +72,5 @@ OUTPUT: values provided by the c++ program to the simulator
 1. Clone this repo.
 2. Make a build directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run it: `./UnscentedKF 
+4. Run it: `./UnscentedKF` 
 
