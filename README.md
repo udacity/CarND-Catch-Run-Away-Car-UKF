@@ -28,10 +28,10 @@ cmake .. make
 
 ./UnscentedKF
 
-Note that the programs that need to be written to accomplish the project are src/ukf.cpp, ukf.h, and main.cpp which will use some stragety to catch the car, just going to the cars current esimtated position will not be enough since the capture vehicle is not fast enough. There are a number of different strageties you can use to try to catch the car, but all will likely involve prediciting where the car will be in the future which the UKF can do. Also remember that the run away car is simplying moving a circular path without any noise in its movements.
+Note that the programs that need to be written to accomplish the project are src/ukf.cpp, ukf.h, and main.cpp which will use some strategy to catch the car, just going to the cars current esimtated position will not be enough since the capture vehicle is not fast enough. There are a number of different strategies you can use to try to catch the car, but all will likely involve predicting where the car will be in the future which the UKF can do. Also remember that the run away car is simplifying moving a circular path without any noise in its movements.
 
 
-Here is the main protcol that main.cpp uses for uWebSocketIO in communicating with the simulator.
+Here is the main protocol that main.cpp uses for uWebSocketIO in communicating with the simulator.
 
 INPUT: values provided by the simulator to the c++ program
 
@@ -45,7 +45,7 @@ INPUT: values provided by the simulator to the c++ program
 
 ["hunter_heading"]
 
-// get noisy lidar and radar measurments from the run away car.
+// get noisy lidar and radar measurements from the run away car.
 
 ["lidar_measurement"]
 
@@ -56,7 +56,7 @@ OUTPUT: values provided by the c++ program to the simulator
 
 // best particle values used for calculating the error evaluation
 
-["turn"] <= the desired angle of the capture car "hunter" no limit for the anlge
+["turn"] <= the desired angle of the capture car "hunter" no limit for the angle
 
 ["dist"] <= the desired distance to move the capture car "hunter" can't move faster than run away car
 
